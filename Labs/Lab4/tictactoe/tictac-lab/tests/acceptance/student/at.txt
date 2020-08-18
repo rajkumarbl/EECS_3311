@@ -1,0 +1,16 @@
+--normal execution, no errors
+new_game("Xavier","Ora")
+play("Xavier",1)
+play("Ora",2)
+play("Xavier",9)
+play("Ora",5)
+play("Xavier",7)
+play("Ora",8)
+undo
+undo
+undo
+redo
+undo
+redo
+undo
+

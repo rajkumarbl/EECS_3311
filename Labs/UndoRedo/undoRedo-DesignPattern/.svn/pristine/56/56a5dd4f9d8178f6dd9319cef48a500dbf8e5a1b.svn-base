@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - macosx-x86-64">
+<meta name="description" content="Move operation with undo/redo"/>
+<meta name="author" content="JSO"/>
+<meta name="date" content="$Date$"/>
+<meta name="revision" content="$Revision$"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>move Contracts</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="move"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Move operation with undo/redo&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;JSO&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
+	<A CLASS="eclass" HREF="../undoredo/move_short.html">MOVE</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../undoredo/move_short.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> queries</SPAN>
+
+	<A NAME="f_old_position"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_old_position">old_position</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">h</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN>
+
+	<A NAME="f_new_position"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_new_position">new_position</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">h</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN>
+
+	<A NAME="f_left"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_left">Left</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+
+	<A NAME="f_right"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_right">Right</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">2</SPAN>
+
+	<A NAME="f_up"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_up">Up</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">3</SPAN>
+
+	<A NAME="f_down"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_down">Down</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">4</SPAN>
+
+	<A NAME="f_can_move"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_can_move">can_move</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_direction</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+				<A CLASS="efeature" HREF="../undoredo/move_short.html#f_left">Left</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="elocal">a_direction</SPAN>
+				<SPAN CLASS="elocal">a_direction</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../undoredo/move_short.html#f_down">Down</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN>
+
+	<A NAME="f_direction"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_direction">direction</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_direction</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+				<A CLASS="efeature" HREF="../undoredo/move_short.html#f_left">Left</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="elocal">a_direction</SPAN>
+				<SPAN CLASS="elocal">a_direction</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../undoredo/move_short.html#f_down">Down</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> commands</SPAN>
+
+	<A NAME="f_set"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_set">set</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_direction</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+				<A CLASS="efeature" HREF="../undoredo/move_short.html#f_left">Left</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="elocal">a_direction</SPAN>
+				<SPAN CLASS="elocal">a_direction</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../undoredo/move_short.html#f_down">Down</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_integer_64</SPAN>
+				<A CLASS="efeature" HREF="../undoredo/move_short.html#f_can_move">can_move</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_direction</SPAN><SPAN CLASS="esymbol">)</SPAN>
+
+	<A NAME="f_execute"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_execute">execute</A>
+
+	<A NAME="f_undo"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_undo">undo</A>
+
+	<A NAME="f_redo"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_redo">redo</A>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_out"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> New string containing terse printable representation</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of current object</SPAN>
+
+	<A NAME="f_debug_output"></A><A CLASS="efeature" HREF="../undoredo/move_short.html#f_debug_output">debug_output</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> String that should be displayed in debugger to represent </SPAN><SPAN CLASS="equoted">Current</SPAN><SPAN CLASS="ecomment">.</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../undoredo/move_short.html">MOVE</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="move"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

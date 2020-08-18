@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - macosx-x86-64">
+<meta name="description" content="Generation of random integer numbers  over an integer range low .. high"/>
+<meta name="author" content=""/>
+<meta name="date" content="$Date$"/>
+<meta name="revision" content="$Revision$"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>random_interval Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="random_interval"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;</SPAN><SPAN CLASS="estring">[</SPAN>
+		<SPAN CLASS="estring">Generation of random integer numbers </SPAN>
+		<SPAN CLASS="estring">over an integer range low .. high</SPAN>
+	<SPAN CLASS="estring">]</SPAN><SPAN CLASS="estring">&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../undoredo/random_interval.html">RANDOM_INTERVAL</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../undoredo/random_interval.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> 
+
+	<A NAME="f_random"></A><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_random">random</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">RANDOM</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_make">make</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">low_limit</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">high_limit</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> create an integer interval</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN><SPAN CLASS="equoted">low_limit</SPAN><SPAN CLASS="ecomment">..</SPAN><SPAN CLASS="equoted">high_limit</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> for the generation of ramdom numbers</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+				<SPAN CLASS="elocal">low_limit</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="elocal">high_limit</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_random">random</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/random_interval.html#f_low">low</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">low_limit</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/random_interval.html#f_high">high</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">high_limit</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/random_interval.html#f_item">item</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_low">low</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_low"></A><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_low">low</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> integer interval low .. high</SPAN>
+
+	<A NAME="f_high"></A><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_high">high</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> integer interval low .. high</SPAN>
+
+	<A NAME="f_generate"></A><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_generate">generate</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> generate a new random number </SPAN><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_item">item</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in interval low..high</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/random_interval.html#f_random">random</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">forth</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/random_interval.html#f_real">real</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_random">random</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">real_item</SPAN> <SPAN CLASS="esymbol">*</SPAN> <SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_high">high</A> <SPAN CLASS="esymbol">-</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_low">low</A> <SPAN CLASS="esymbol">+</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">to_real</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/random_interval.html#f_item">item</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_real">real</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">truncated_to_integer</SPAN> <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_low">low</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_real"></A><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_real">real</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">REAL_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> between 0 and 1</SPAN>
+
+	<A NAME="f_item"></A><A CLASS="efeature" HREF="../undoredo/random_interval.html#f_item">item</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> between low and hi</SPAN>
+	
+<SPAN CLASS="ekeyword">invariant</SPAN>
+		<A CLASS="efeature" HREF="../undoredo/random_interval.html#f_low">low</A> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_item">item</A> <SPAN CLASS="ekeyword">and</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_item">item</A> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../undoredo/random_interval.html#f_high">high</A>
+
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../undoredo/random_interval.html">RANDOM_INTERVAL</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="random_interval_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="random_interval"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

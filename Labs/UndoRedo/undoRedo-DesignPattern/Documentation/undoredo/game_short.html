@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - macosx-x86-64">
+<meta name="description" content="A 2-dimensional board with a single movable piece that can move left, right, up and down as well as take a random jump. Supported by an und/redeo design pattern as in OOSC2 Chapter 21"/>
+<meta name="author" content="JSO"/>
+<meta name="date" content="$Date$"/>
+<meta name="revision" content="$Revision$"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>game Contracts</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="game"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;</SPAN><SPAN CLASS="estring">[</SPAN>
+		<SPAN CLASS="estring">A 2-dimensional board with a single movable piece</SPAN>
+		<SPAN CLASS="estring">that can move left, right, up and down</SPAN>
+		<SPAN CLASS="estring">as well as take a random jump.</SPAN>
+		<SPAN CLASS="estring">Supported by an und/redeo design pattern</SPAN>
+		<SPAN CLASS="estring">as in OOSC2 Chapter 21</SPAN>
+	<SPAN CLASS="estring">]</SPAN><SPAN CLASS="estring">&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;JSO&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
+	<A CLASS="eclass" HREF="../undoredo/game_short.html">GAME</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../undoredo/game_access_short.html">GAME_ACCESS</A><SPAN CLASS="esymbol">}</SPAN>
+	<A CLASS="efeature" HREF="../undoredo/game_short.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> messages</SPAN>
+
+	<A NAME="f_message"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_message">message</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_set_message"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_set_message">set_message</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_message</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN><SPAN CLASS="esymbol">)</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> model attributes</SPAN>
+
+	<A NAME="f_s"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_s">s</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+
+	<A NAME="f_i"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_i">i</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+
+	<A NAME="f_state"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_state">state</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../undoredo/state_short.html">STATE</A>
+
+	<A NAME="f_history"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_history">history</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../undoredo/history_short.html">HISTORY</A>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> model operations</SPAN>
+
+	<A NAME="f_default_update"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_default_update">default_update</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Perform update to the model state.</SPAN>
+
+	<A NAME="f_reset"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_reset">reset</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Reset model state.</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> queries</SPAN>
+
+	<A NAME="f_out"></A><A CLASS="efeature" HREF="../undoredo/game_short.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> relected to the user</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../undoredo/game_short.html">GAME</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="game_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="game"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

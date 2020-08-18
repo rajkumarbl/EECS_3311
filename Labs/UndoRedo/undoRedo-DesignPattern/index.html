@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>index.html</title></head><body>
+<h1>Undo/Redo Design Pattern<br>
+</h1>
+
+<p>At the command line, you can check out this example as follows: <br>
+</p>
+
+<pre>&gt; svn checkout http://svn.eecs.yorku.ca/repos/sel-open/misc/tutorial/undoRedo-DesignPattern<br></pre>
+
+<p>You can explore the code <a href="Documentation/index.html">here</a>.
+<br>
+</p>
+
+<p>This Design Pattern is based on OOSC2, Chapter 21, and illustrates
+the use of polymorphism, static typing and dynamic bining in
+object-oriented design. <br>
+</p>
+
+This example uses the <a href="http://seldoc.eecs.yorku.ca/doku.php/eiffel/etf/start" target="_blank">ETF framework t</a>o decouple user interface from
+business logic.<br>
+
+<br>
+
+The user interface grammar is:<br>
+
+<br>
+
+<table style="text-align: left; width: 525px; height: 282px;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span style="color: rgb(51, 102, 255);">-- A 2-dimensional board with a
+single movable piece</span><br style="color: rgb(51, 102, 255);">
+      <span style="color: rgb(51, 102, 255);">-- that can move left,
+right, up and down</span><br style="color: rgb(51, 102, 255);">
+      <span style="color: rgb(51, 102, 255);">-- as well as take a
+random jump.</span><br style="color: rgb(51, 102, 255);">
+      <span style="color: rgb(51, 102, 255);">-- Supported by an
+undo-redo design pattern</span><br style="color: rgb(51, 102, 255);">
+      <span style="color: rgb(51, 102, 255);">-- as in OOSC2 Chapter 21</span><br>
+      <br>
+      <span style="font-weight: bold;">system</span> undoredo<br>
+      <br>
+      <span style="font-weight: bold;">type</span> DIRECTION =
+{left,right,up,down}<br>
+      <br>
+restart<br>
+move(a_direction: DIRECTION)<br>
+jump<br>
+undo<br>
+redo<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<p>
+The user inputs (inheriting from ETF_COMMAND) have corresponding operations MOVE, JUMP and
+MESSAGE (inheriting from deferred class OPERATION) that can be executed, undone or redone.
+
+</p><p>
+In routine {ETF_JUMP}jump, we see polymorphism and dynamic binding
+at work as follows:
+
+</p><p><img style="width: 838px; height: 312px;" src="jump.png" alt=""></p>
+
+In routine {ETF_UNDO}undo we see polymorphism and dynamic binding
+at work as follows:
+
+<p><img style="width: 845px; height: 402px;" src="undo-op.png" alt=""></p>
+
+<p>A BON diagram for the business logic is
+shown below:<br>
+<br>
+<img style="width: 843px; height: 310px;" src="undo.png" alt=""><br>
+<br>
+</p>
+
+</body></html>

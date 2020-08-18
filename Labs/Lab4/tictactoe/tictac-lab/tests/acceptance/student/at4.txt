@@ -1,0 +1,9 @@
+new_game("Xavier","Ora")
+play("Xavier",1)
+play("Ora",2)
+play("Xavier",9)
+undo
+undo
+undo
+undo
+play("Xavier",4)

@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - macosx-x86-64">
+<meta name="description" content="Summary description for {JUMP}."/>
+<meta name="author" content=""/>
+<meta name="date" content="$Date$"/>
+<meta name="revision" content="$Revision$"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>jump Chart</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="nolink2">Chart</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="jump"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">class</SPAN>
+	<A CLASS="eclass" HREF="../undoredo/jump_chart.html">JUMP</A>
+
+<SPAN CLASS="ekeyword">General</SPAN>
+	<SPAN CLASS="eitag">cluster</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="ecluster" HREF="../undoredo/index.html">undoredo</A>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../undoredo/jump_chart.html">JUMP</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="estring">.&quot;</SPAN>
+	<SPAN CLASS="eitag">create</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="efeature" HREF="../undoredo/jump.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">Ancestors</SPAN>
+	<SPAN CLASS="neclass">DEBUG_OUTPUT</SPAN><SPAN CLASS="echar">*</SPAN>
+	<A CLASS="eclass" HREF="../undoredo/operation_chart.html">OPERATION</A><SPAN CLASS="echar">*</SPAN>
+
+<SPAN CLASS="ekeyword">Queries</SPAN>
+	<SPAN TITLE="`convert_index_to_position' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_convert_index_to_position">convert_index_to_position</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_index</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
+	<SPAN TITLE="`debug_output' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_debug_output">debug_output</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
+	<SPAN TITLE="`game' was declared in OPERATION"><A CLASS="efeature" HREF="../undoredo/operation.html#f_game">Game</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../undoredo/game_chart.html">GAME</A></SPAN>
+	<SPAN TITLE="`index' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_index">index</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
+	<SPAN TITLE="`item' was declared in OPERATION"><A CLASS="efeature" HREF="../undoredo/operation.html#f_item">item</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
+	<SPAN TITLE="`new_position' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_new_position">new_position</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
+	<SPAN TITLE="`old_position' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_old_position">old_position</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
+	<SPAN TITLE="`out' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
+	<SPAN TITLE="`random' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_random">Random</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../undoredo/random_interval_chart.html">RANDOM_INTERVAL</A></SPAN>
+	<SPAN TITLE="`state' was declared in OPERATION"><A CLASS="efeature" HREF="../undoredo/operation.html#f_state">State</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../undoredo/state_chart.html">STATE</A></SPAN>
+
+<SPAN CLASS="ekeyword">Commands</SPAN>
+	<SPAN TITLE="`execute' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_execute">execute</A></SPAN>
+	<SPAN TITLE="`redo' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_redo">redo</A></SPAN>
+	<SPAN TITLE="`undo' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/jump.html#f_undo">undo</A></SPAN>
+
+<FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="nolink2">Chart</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="jump_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="jump"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>

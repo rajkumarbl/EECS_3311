@@ -1,0 +1,19 @@
+-- A 2-dimensional board with a single movable piece
+-- that can move left, right, up and down
+-- as well as take a random jump.
+-- Supported by an und/redeo design pattern
+-- as in OOSC2 Chapter 21
+
+system undoredo
+
+type DIRECTION = {left,right,up,down}
+
+restart
+
+move(a_direction: DIRECTION)
+
+jump
+
+undo
+
+redo

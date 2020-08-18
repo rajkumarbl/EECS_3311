@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - macosx-x86-64">
+<meta name="description" content="State of the game, which stores Tgrid2d (i.e.. the board) of `height' by `width' Tposition of a single piece on the board Tmove operation"/>
+<meta name="author" content="JSO"/>
+<meta name="date" content="$Date$"/>
+<meta name="revision" content="$Revision$"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>state Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="state"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;</SPAN><SPAN CLASS="estring">[</SPAN>
+		<SPAN CLASS="estring">State of the game, which stores</SPAN>
+		<SPAN CLASS="estring">	grid2d (i.e.. the board) of </SPAN><A CLASS="efeature" HREF="../undoredo/state.html#f_height">Height</A><SPAN CLASS="estring"> by </SPAN><A CLASS="efeature" HREF="../undoredo/state.html#f_width">Width</A>
+		<SPAN CLASS="estring">	position of a single piece on the board</SPAN>
+		<SPAN CLASS="estring">	move operation</SPAN>
+	<SPAN CLASS="estring">]</SPAN><SPAN CLASS="estring">&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;JSO&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date$&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../undoredo/state.html">STATE</A>
+
+<SPAN CLASS="ekeyword">inherit</SPAN>
+	<SPAN CLASS="neclass">ANY</SPAN>
+		<SPAN CLASS="ekeyword">redefine</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/state.html#f_out">out</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../undoredo/state.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> constructor</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../undoredo/state.html#f_make">make</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> create a board with movable piece</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> at position </SPAN><SPAN CLASS="ecomment">[1,1]</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_filled</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../undoredo/state.html#f_empty">Empty</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_height">Height</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_width">Width</A><SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> queries</SPAN>
+
+	<A NAME="f_empty"></A><A CLASS="efeature" HREF="../undoredo/state.html#f_empty">Empty</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+
+	<A NAME="f_height"></A><A CLASS="efeature" HREF="../undoredo/state.html#f_height">Height</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">5</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> height of the board</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> number of rows</SPAN>
+
+	<A NAME="f_width"></A><A CLASS="efeature" HREF="../undoredo/state.html#f_width">Width</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">5</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> width of the board</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> number of columns</SPAN>
+
+	<A NAME="f_grid2d"></A><A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY2</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the board whic is all zeros</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> except the position</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of the piece which is 1</SPAN>
+
+	<A NAME="f_position"></A><A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">h</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> position of a single piece on the board</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> commands</SPAN>
+
+	<A NAME="f_move"></A><A CLASS="efeature" HREF="../undoredo/state.html#f_move">move</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_height</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">a_width</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> move the piece to position [a_height, a_width]</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+			<SPAN CLASS="etag">valid_row</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="elocal">a_height</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">a_height</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">height</SPAN>
+			<SPAN CLASS="etag">valid_column</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <SPAN CLASS="elocal">a_width</SPAN> <SPAN CLASS="ekeyword">and</SPAN> <SPAN CLASS="elocal">a_width</SPAN> <SPAN CLASS="esymbol">&lt;=</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">width</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A> <SPAN CLASS="esymbol">[</SPAN><A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="elocal">h</SPAN><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="elocal">w</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">a_height</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">a_width</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">a_height</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">a_width</SPAN><SPAN CLASS="esymbol">]</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN>
+				<A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A> <SPAN CLASS="esymbol">~</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">a_height</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">a_width</SPAN><SPAN CLASS="esymbol">]</SPAN>
+				<A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">a_height</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">a_width</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+				<A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">old</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="elocal">h</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">old</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="elocal">w</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">]</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">0</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> out</SPAN>
+
+	<A NAME="f_out"></A><A CLASS="efeature" HREF="../undoredo/state.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> repersentation of board</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> as zeros and ones</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">l_show</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> &quot;  &quot;
+			<SPAN CLASS="ekeyword">across</SPAN>
+				<SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="esymbol">|..|</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_height">Height</A> <SPAN CLASS="ekeyword">as</SPAN> h
+			<SPAN CLASS="ekeyword">loop</SPAN>
+				<SPAN CLASS="ekeyword">across</SPAN>
+					<SPAN CLASS="enumber">1</SPAN> <SPAN CLASS="esymbol">|..|</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_width">Width</A> <SPAN CLASS="ekeyword">as</SPAN> w
+				<SPAN CLASS="ekeyword">loop</SPAN>
+					<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="elocal">h</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">w</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN><SPAN CLASS="esymbol">]</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">out</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">+</SPAN> &quot;%N  &quot;
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">substring</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">1</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="ekeyword">Result</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">count</SPAN> <SPAN CLASS="esymbol">-</SPAN> <SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">invariant</SPAN>
+	<SPAN CLASS="etag">is_digit</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">across</SPAN>
+			<A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A> <SPAN CLASS="ekeyword">as</SPAN> cr
+		<SPAN CLASS="ekeyword">all</SPAN>
+			<SPAN CLASS="elocal">cr</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">0</SPAN> <SPAN CLASS="ekeyword">or</SPAN> <SPAN CLASS="elocal">cr</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">item</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../undoredo/state.html">STATE</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="state"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

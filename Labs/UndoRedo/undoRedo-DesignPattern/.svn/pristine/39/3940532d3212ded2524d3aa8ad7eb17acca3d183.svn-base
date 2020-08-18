@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - macosx-x86-64">
+<meta name="description" content="State of the game, which stores Tgrid2d (i.e.. the board) of `height' by `width' Tposition of a single piece on the board Tmove operation"/>
+<meta name="author" content="JSO"/>
+<meta name="date" content="$Date$"/>
+<meta name="revision" content="$Revision$"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>state Chart</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="nolink2">Chart</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="state"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">class</SPAN>
+	<A CLASS="eclass" HREF="../undoredo/state_chart.html">STATE</A>
+
+<SPAN CLASS="ekeyword">General</SPAN>
+	<SPAN CLASS="eitag">cluster</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="ecluster" HREF="../undoredo/index.html">undoredo</A>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> 
+		<SPAN CLASS="estring">&quot;State of the game, which stores</SPAN>
+		<SPAN CLASS="estring">grid2d (i.e.. the board) of </SPAN><SPAN CLASS="estring">height</SPAN><SPAN CLASS="estring"> by </SPAN><SPAN CLASS="estring">width</SPAN>
+		<SPAN CLASS="estring">position of a single piece on the board</SPAN>
+		<SPAN CLASS="estring">move operation&quot;</SPAN>
+	<SPAN CLASS="eitag">create</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="efeature" HREF="../undoredo/state.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">Ancestors</SPAN>
+	<SPAN CLASS="neclass">ANY</SPAN>
+
+<SPAN CLASS="ekeyword">Queries</SPAN>
+	<SPAN TITLE="`empty' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/state.html#f_empty">Empty</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
+	<SPAN TITLE="`grid2d' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/state.html#f_grid2d">grid2d</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">ARRAY2</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
+	<SPAN TITLE="`height' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/state.html#f_height">Height</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
+	<SPAN TITLE="`out' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/state.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
+	<SPAN TITLE="`position' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/state.html#f_position">position</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
+	<SPAN TITLE="`width' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/state.html#f_width">Width</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
+
+<SPAN CLASS="ekeyword">Commands</SPAN>
+	<SPAN TITLE="`move' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/state.html#f_move">move</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_height</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">a_width</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
+
+<SPAN CLASS="ekeyword">Constraints</SPAN>
+	<SPAN CLASS="etag">is digit</SPAN>
+
+<FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="nolink2">Chart</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="state_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="state"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>

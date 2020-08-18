@@ -1,0 +1,17 @@
+-- Move Container errors
+
+new_tracker(40, 30)
+
+new_phase("pid1", "compacting", 1, <<glass, metal, plastic>>) 
+new_phase("pid2", "assay", 3, <<glass, metal, plastic, liquid>>) 
+new_phase("pid3", "comp-ass", 4, <<glass, liquid>>)
+
+new_container("cid1", [metal,   10.0], "pid1") 
+new_container("cid2", [glass,   10.0], "pid3") 
+new_container("cid3", [glass,   30], "pid3") 
+new_container("cid4", [liquid,   0.00], "pid3")
+
+move_container ("cid5", "pid1", "pid2") -- error e15
+move_container ("cid1", "pid1", "pid1") -- error e16
+move_container ("cid1", "pid1", "Pid4") -- error e9
+move_container ("cid2", "pid1", "pid2") -- error e17

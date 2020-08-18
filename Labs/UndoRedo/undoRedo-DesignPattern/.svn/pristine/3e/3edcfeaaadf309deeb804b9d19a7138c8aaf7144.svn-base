@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 17.05.10.0416 GPL Edition - macosx-x86-64">
+<meta name="description" content="Move operation with undo/redo"/>
+<meta name="author" content="JSO"/>
+<meta name="date" content="$Date$"/>
+<meta name="revision" content="$Revision$"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>move Chart</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="nolink2">Chart</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="move"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">class</SPAN>
+	<A CLASS="eclass" HREF="../undoredo/move_chart.html">MOVE</A>
+
+<SPAN CLASS="ekeyword">General</SPAN>
+	<SPAN CLASS="eitag">cluster</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="ecluster" HREF="../undoredo/index.html">undoredo</A>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Move operation with undo/redo&quot;</SPAN>
+	<SPAN CLASS="eitag">create</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="efeature" HREF="../undoredo/move.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">Ancestors</SPAN>
+	<SPAN CLASS="neclass">DEBUG_OUTPUT</SPAN><SPAN CLASS="echar">*</SPAN>
+	<A CLASS="eclass" HREF="../undoredo/operation_chart.html">OPERATION</A><SPAN CLASS="echar">*</SPAN>
+
+<SPAN CLASS="ekeyword">Queries</SPAN>
+	<SPAN TITLE="`can_move' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_can_move">can_move</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_direction</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">BOOLEAN</SPAN></SPAN>
+	<SPAN TITLE="`debug_output' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_debug_output">debug_output</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
+	<SPAN TITLE="`direction' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_direction">direction</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_direction</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
+	<SPAN TITLE="`down' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_down">Down</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
+	<SPAN TITLE="`game' was declared in OPERATION"><A CLASS="efeature" HREF="../undoredo/operation.html#f_game">Game</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../undoredo/game_chart.html">GAME</A></SPAN>
+	<SPAN TITLE="`item' was declared in OPERATION"><A CLASS="efeature" HREF="../undoredo/operation.html#f_item">item</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
+	<SPAN TITLE="`left' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_left">Left</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
+	<SPAN TITLE="`new_position' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_new_position">new_position</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
+	<SPAN TITLE="`old_position' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_old_position">old_position</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TUPLE</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN><SPAN CLASS="esymbol">]</SPAN></SPAN>
+	<SPAN TITLE="`out' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_out">out</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">STRING_8</SPAN></SPAN>
+	<SPAN TITLE="`right' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_right">Right</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
+	<SPAN TITLE="`state' was declared in OPERATION"><A CLASS="efeature" HREF="../undoredo/operation.html#f_state">State</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../undoredo/state_chart.html">STATE</A></SPAN>
+	<SPAN TITLE="`up' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_up">Up</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN></SPAN>
+
+<SPAN CLASS="ekeyword">Commands</SPAN>
+	<SPAN TITLE="`execute' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_execute">execute</A></SPAN>
+	<SPAN TITLE="`redo' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_redo">redo</A></SPAN>
+	<SPAN TITLE="`set' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_set">set</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_direction</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">)</SPAN></SPAN>
+	<SPAN TITLE="`undo' is declared in `Current'"><A CLASS="efeature" HREF="../undoredo/move.html#f_undo">undo</A></SPAN>
+
+<FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="nolink2">Chart</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_flat.html">Flat</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_short.html">Contracts</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="move_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="move"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>

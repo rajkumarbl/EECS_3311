@@ -1,0 +1,23 @@
+--at3.txt: normal scenario: add persons, they marry, divorce, die, remove
+put(1,"Raj",[27,06,1996])
+put_alien(2,"Manika",[06,01,1997],"India")
+put_alien(2,"Hannah",[17,02,1990],"England")
+put_alien(3,"Alagu Raghavi",[16,11,2017],"India")
+put(4,"Rohin",[16,05,1994])
+put(4,"Sibhi",[18,09,1995])
+put(5,"Sibhi",[18,09,1989])
+put(6,"Rohin",[16,05,1996])
+put(7,"Shruthi",[22,07,1997])
+marry(6,7,[05,07,2016])
+marry(2,5,[08,01,2010])
+marry(5,7,[05,07,2017])
+divorce(6,7)
+divorce(2,5)
+marry(1,2,[06,09,2015])
+die(2)
+marry(6,5,[08,01,2017])
+marry(4,3,[05,07,2016])
+die(1)
+put(8,"lingam",[01,07,2010])
+
+
